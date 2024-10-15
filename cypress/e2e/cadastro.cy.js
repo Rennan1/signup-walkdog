@@ -6,7 +6,7 @@ describe('Walkdog', () => {
     cy.visit('/');
     cy.intercept('POST', 'https://jsonplaceholder.typicode.com/posts').as('postForm')
   });
-  it('Cadastro', () => {
+  it('Cadastro de cuidador e adestrador', () => {
     cy.get('a[href="/signup"').click()
 
     cy.get('input[placeholder="Nome completo"]').type(faker.name.findName())
